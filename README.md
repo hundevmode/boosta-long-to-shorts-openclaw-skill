@@ -1,4 +1,4 @@
-# Boosta Video API Skill for OpenClaw
+# Boosta Long to Shorts Skill for OpenClaw
 
 Create viral short clips from long-form video using the Boosta API directly from OpenClaw workflows.
 
@@ -36,7 +36,7 @@ Create viral short clips from long-form video using the Boosta API directly from
 
 ## What This Skill Does
 
-`boosta-video-api` is an OpenClaw-compatible skill that helps agents:
+`boosta-long-to-shorts` is an OpenClaw-compatible skill that helps agents:
 
 - Submit a new Boosta job from a source video URL
 - Poll and track job status
@@ -65,7 +65,7 @@ This is designed for production-style automation where reliability and clear sta
 ## Project Structure
 
 ```text
-boosta-video-api/
+boosta-long-to-shorts/
 ├── SKILL.md
 ├── README.md
 ├── .gitignore
@@ -90,8 +90,8 @@ boosta-video-api/
 ### 1) Clone repository
 
 ```bash
-git clone https://github.com/hundevmode/boosta-video-api-openclaw-skill.git
-cd boosta-video-api
+git clone https://github.com/hundevmode/boosta-long-to-shorts-openclaw-skill.git
+cd boosta-long-to-shorts
 ```
 
 ### 2) Set API key
@@ -111,13 +111,13 @@ python3 scripts/boosta_job.py --help
 Install directly from GitHub with Vercel skills CLI:
 
 ```bash
-npx skills add hundevmode/boosta-video-api-openclaw-skill --skill boosta-video-api
+npx skills add hundevmode/boosta-long-to-shorts-openclaw-skill --skill boosta-long-to-shorts
 ```
 
 List skills in this repo before install:
 
 ```bash
-npx skills add https://github.com/hundevmode/boosta-video-api-openclaw-skill --list
+npx skills add https://github.com/hundevmode/boosta-long-to-shorts-openclaw-skill --list
 ```
 
 ## Install from ClawHub
@@ -125,13 +125,13 @@ npx skills add https://github.com/hundevmode/boosta-video-api-openclaw-skill --l
 Published package:
 
 ```bash
-clawhub install boosta-video-api
+clawhub install boosta-long-to-shorts
 ```
 
 Search:
 
 ```bash
-clawhub search boosta-video-api
+clawhub search boosta-long-to-shorts
 ```
 
 ## Usage
@@ -201,7 +201,7 @@ Selection rules and heuristics: `references/video-types.md`.
 1. Update files (`SKILL.md`, scripts, references).
 2. Bump version when publishing to ClawHub:
 ```bash
-clawhub publish . --slug boosta-video-api --name "Boosta Video API" --version <next-semver> --tags latest
+clawhub publish . --slug boosta-long-to-shorts --name "Boosta Long to Shorts" --version <next-semver> --tags latest
 ```
 3. Push to GitHub:
 ```bash
@@ -211,8 +211,8 @@ git push
 ```
 4. Verify install paths:
 ```bash
-npx skills add hundevmode/boosta-video-api-openclaw-skill --skill boosta-video-api
-clawhub install boosta-video-api
+npx skills add hundevmode/boosta-long-to-shorts-openclaw-skill --skill boosta-long-to-shorts
+clawhub install boosta-long-to-shorts
 ```
 
 ## SEO Keywords

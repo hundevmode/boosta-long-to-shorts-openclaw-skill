@@ -1,5 +1,5 @@
 ---
-name: boosta-video-api
+name: boosta-long-to-shorts
 description: Create, monitor, and troubleshoot Boosta API video-processing jobs from natural-language requests. Use this skill when a user asks to generate clips from a video URL via Boosta, check job status, fetch completed clip URLs, inspect usage/credits, choose the correct video_type, or handle Boosta API errors and retry logic.
 ---
 
