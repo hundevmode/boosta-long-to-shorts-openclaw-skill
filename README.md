@@ -5,6 +5,7 @@ Create viral short clips from long-form video using the Boosta API directly from
 [![Boosta](https://img.shields.io/badge/Boosta-API-0ea5e9)](https://boosta.pro)
 [![Docs](https://img.shields.io/badge/Docs-boosta.pro%2Fapi-22c55e)](https://docs.boosta.pro/api/getting-started)
 [![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-f59e0b)](https://docs.openclaw.ai/tools/skills)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 ## Quick Links
 
@@ -24,9 +25,12 @@ Create viral short clips from long-form video using the Boosta API directly from
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Install as a Skill (skills.sh)](#install-as-a-skill-skillssh)
+- [Install from ClawHub](#install-from-clawhub)
 - [API Flow](#api-flow)
 - [Error Handling](#error-handling)
 - [Video Type Mapping](#video-type-mapping)
+- [Release Process](#release-process)
 - [SEO Keywords](#seo-keywords)
 - [License](#license)
 
@@ -86,7 +90,7 @@ boosta-video-api/
 ### 1) Clone repository
 
 ```bash
-git clone <your-repo-url>.git
+git clone https://github.com/hundevmode/boosta-video-api-openclaw-skill.git
 cd boosta-video-api
 ```
 
@@ -100,6 +104,34 @@ export BOOSTA_API_KEY="sk_live_..."
 
 ```bash
 python3 scripts/boosta_job.py --help
+```
+
+## Install as a Skill (skills.sh)
+
+Install directly from GitHub with Vercel skills CLI:
+
+```bash
+npx skills add hundevmode/boosta-video-api-openclaw-skill --skill boosta-video-api
+```
+
+List skills in this repo before install:
+
+```bash
+npx skills add https://github.com/hundevmode/boosta-video-api-openclaw-skill --list
+```
+
+## Install from ClawHub
+
+Published package:
+
+```bash
+clawhub install boosta-video-api
+```
+
+Search:
+
+```bash
+clawhub search boosta-video-api
 ```
 
 ## Usage
@@ -164,10 +196,29 @@ Supported `video_type` values:
 
 Selection rules and heuristics: `references/video-types.md`.
 
+## Release Process
+
+1. Update files (`SKILL.md`, scripts, references).
+2. Bump version when publishing to ClawHub:
+```bash
+clawhub publish . --slug boosta-video-api --name "Boosta Video API" --version <next-semver> --tags latest
+```
+3. Push to GitHub:
+```bash
+git add .
+git commit -m "chore: release <version>"
+git push
+```
+4. Verify install paths:
+```bash
+npx skills add hundevmode/boosta-video-api-openclaw-skill --skill boosta-video-api
+clawhub install boosta-video-api
+```
+
 ## SEO Keywords
 
 Boosta API, OpenClaw skill, AI video automation, viral clip generation, Boosta video API integration, short-form video automation, YouTube clip generator, API video processing pipeline.
 
 ## License
 
-Internal/private use unless you add your own license file for public release.
+MIT. See `LICENSE`.
