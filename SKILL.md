@@ -1,6 +1,16 @@
 ---
 name: boosta-long-to-shorts
 description: Create, monitor, and troubleshoot Boosta API video-processing jobs from natural-language requests. Use this skill when a user asks to generate clips from a video URL via Boosta, check job status, fetch completed clip URLs, inspect usage/credits, choose the correct video_type, or handle Boosta API errors and retry logic.
+compatibility: Requires network access and valid Boosta API key
+metadata:
+  author: hundevmode
+  version: "1.0"
+  clawdbot:
+    homepage: "https://boosta.pro"
+    source: "https://github.com/hundevmode/boosta-long-to-shorts-openclaw-skill"
+    requires:
+      env:
+        - BOOSTA_API_KEY
 ---
 
 # Boosta Video Api
